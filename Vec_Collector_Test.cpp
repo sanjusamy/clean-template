@@ -1,28 +1,5 @@
 #include <gtest/gtest.h>
-
-typedef enum
-{
- MOTOR_TEMP = 0,
- BATTERY_TEMP,
- BATTERY_SOC 
-}Vehicle_Param;
-
-typedef VehicleId_type unsigned short;
-
-typedef struct{
-  VehicleId_type vehicleId;
-  Vehicle_Param paramId;
-  float paramValue; 
-}Vehicle_InputMsgConfig;
-
-typedef struct{
-  VehicleId_type vehicleId;
-  float motorTempValue; 
-  float batteryTempValue;
-  float batterySoc;
-}Vehicle_StorageMsgConfig;
-
-
+#include "Vec_Collector.h"
 
 
 TEST(VitalsTest, when_a_parameter_received_from_a_vehicle_should_update_aginst_vechile_id) 
