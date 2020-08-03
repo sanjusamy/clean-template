@@ -5,7 +5,7 @@ typedef enum
  BATTERY_SOC 
 }Vehicle_Param;
 
-typedef VehicleId_type unsigned short;
+typedef unsigned short VehicleId_type;
 
 typedef struct{
   VehicleId_type vehicleId;
