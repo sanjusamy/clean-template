@@ -14,13 +14,10 @@ void update_veh_param(unsigned short index,  const Vehicle_InputMsgConfig *input
   {
     Vehicle_Info[index].batteryTempValue = inputMsg->paramValue;
   }
-  else if ((inputMsg->paramId == BATTERY_SOC))
+  else 
   {
     Vehicle_Info[index].batterySoc = inputMsg->paramValue;
-  }
-  else
-  {
-  }
+  }  
 }
 
 void update_vehicle_information(const Vehicle_InputMsgConfig *inputMsg, Vehicle_StorageMsgConfig *storage)
