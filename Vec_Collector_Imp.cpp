@@ -5,17 +5,17 @@ Vehicle_StorageMsgConfig Vehicle_Info[MAX_VEHICLE];
 
 update_veh_param(unsigned short index,  const Vehicle_InputMsgConfig *inputMsg)   
 {
-  if(inputMsg.paramId == MOTOR_TEMP)
+  if(inputMsg->paramId == MOTOR_TEMP)
   {
-    Vehicle_Info[index].motorTempValue = inputMsg.paramValue;
+    Vehicle_Info[index].motorTempValue = inputMsg->paramValue;
   }
-  else if (inputMsg.paramId == BATTERY_TEMP)
+  else if (inputMsg->paramId == BATTERY_TEMP)
   {
-    Vehicle_Info[index].batteryTempValue = inputMsg.paramValue;
+    Vehicle_Info[index].batteryTempValue = inputMsg->paramValue;
   }
-  else if ((inputMsg.paramId == BATTERY_SOC))
+  else if ((inputMsg->paramId == BATTERY_SOC))
   {
-    Vehicle_Info[index].batterySoc = inputMsg.paramValue;
+    Vehicle_Info[index].batterySoc = inputMsg->paramValue;
   }
   else
   {
