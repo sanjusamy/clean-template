@@ -2,7 +2,18 @@
 #include "Vec_Collector.h"
 #include <string.h>
 
-Vehicle_StorageMsgConfig Vehicle_Info[MAX_VEHICLE];
+Vehicle_StorageMsgConfig Vehicle_Info[MAX_VEHICLE] = {
+  {1,0,0,0},
+  {2,0,0,0},
+  {3,0,0,0},
+  {4,0,0,0},
+  {5,0,0,0},
+  {6,0,0,0},
+  {7,0,0,0},
+  {8,0,0,0},
+  {9,0,0,0},
+  {10,0,0,0},
+};
 
 void update_veh_param(unsigned short index,  const Vehicle_InputMsgConfig *inputMsg)   
 {
