@@ -1,4 +1,3 @@
-
 typedef enum
 {
  MOTOR_TEMP = 0,
@@ -20,3 +19,5 @@ typedef struct{
   float batteryTempValue;
   float batterySoc;
 }Vehicle_StorageMsgConfig;
+
+#define MAX_VEHICLE  10
