@@ -21,3 +21,5 @@ typedef struct{
 }Vehicle_StorageMsgConfig;
 
 #define MAX_VEHICLE  10
+
+void update_vehicle_information(const Vehicle_InputMsgConfig *inputMsg, Vehicle_StorageMsgConfig *storage);
