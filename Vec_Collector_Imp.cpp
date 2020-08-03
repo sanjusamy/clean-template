@@ -27,11 +27,11 @@ void update_vehicle_information(const Vehicle_InputMsgConfig *inputMsg, Vehicle_
   unsigned short index=0;
   for(index=0; index < MAX_VEHICLE; index++)
   {
-    if(inputMsg.vehicleId == Vehicle_Info[index].vehicleId)
+    if(inputMsg->vehicleId == Vehicle_Info[index].vehicleId)
     {
       update_veh_param(index,  inputMsg);
       break;            
     }
   }  
-  storage = Vehicle_Info[index];
+  storage = &Vehicle_Info[index];
 }
