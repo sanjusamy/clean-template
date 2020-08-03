@@ -1,5 +1,6 @@
 
 #include "Vec_Collector.h"
+#include <string.h>
 
 Vehicle_StorageMsgConfig Vehicle_Info[MAX_VEHICLE];
 
@@ -33,5 +34,5 @@ void update_vehicle_information(const Vehicle_InputMsgConfig *inputMsg, Vehicle_
       break;            
     }
   }  
-  storage = &Vehicle_Info[index];
+  memcpy(storage, &Vehicle_Info[index], sizeof(Vehicle_Info[0]));
 }
