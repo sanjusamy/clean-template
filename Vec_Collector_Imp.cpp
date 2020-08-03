@@ -32,5 +32,5 @@ void update_vehicle_information(const Vehicle_InputMsgConfig *inputMsg, Vehicle_
       break;            
     }
   }  
-  return (Vehicle_Info[index]);
+  storage = Vehicle_Info[index];
 }
