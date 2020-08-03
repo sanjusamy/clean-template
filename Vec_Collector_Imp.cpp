@@ -3,7 +3,7 @@
 
 Vehicle_StorageMsgConfig Vehicle_Info[MAX_VEHICLE];
 
-update_veh_param(unsigned short index,  const Vehicle_InputMsgConfig *inputMsg)   
+void update_veh_param(unsigned short index,  const Vehicle_InputMsgConfig *inputMsg)   
 {
   if(inputMsg->paramId == MOTOR_TEMP)
   {
