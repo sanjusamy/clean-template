@@ -16,7 +16,7 @@ TEST(VehicleCollectorTest, when_a_parameter_received_from_a_vehicle_should_updat
    
  inputMsg = {1, BATTERY_SOC, 75.0};
  update_vehicle_information(&inputMsg, &vehicleRecord);
- EXPECT_NEAR(75.0, vehicleRecord.batterySocValue, 0.01);  
+ EXPECT_NEAR(75.0, vehicleRecord.batterySoc, 0.01);  
 }
 
  
