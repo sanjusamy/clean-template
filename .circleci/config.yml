@@ -20,7 +20,11 @@ jobs:
             cmake CMakeLists.txt
             make
             cp -a include/gtest /usr/include  
-            cp *.a /usr/lib
+            cp *.a /usr/lib           
+      - run:
+          name: Install GCov
+          command: |
+            apt-get update && apt-get install -y gcovr
       - run:
           name: Install cppcheck
           command: 'apt-get update && apt-get install -y cppcheck'
@@ -41,4 +45,7 @@ jobs:
           command: 'lizard --CCN 3'
       - run:
           name: Unit test
-          command: './testchecker'
+          command: './testchecker'         
+      - run:
+          name: Report coverage
+          command: 'gcovr -r .'
